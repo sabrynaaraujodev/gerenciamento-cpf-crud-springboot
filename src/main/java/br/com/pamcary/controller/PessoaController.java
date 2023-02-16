@@ -28,7 +28,7 @@ public class PessoaController {
         return mav;
     }
 
-    @GetMapping("/save-person")
+    @PostMapping("/save-person")
     public String savePerson(@ModelAttribute Pessoa pessoa) {
         pessoaService.save(pessoa);
         return "redirect:/";
