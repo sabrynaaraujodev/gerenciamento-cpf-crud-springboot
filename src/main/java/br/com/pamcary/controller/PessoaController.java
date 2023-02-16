@@ -3,8 +3,7 @@ package br.com.pamcary.controller;
 import br.com.pamcary.entity.Pessoa;
 import br.com.pamcary.service.PessoaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -18,8 +17,35 @@ public class PessoaController {
     public ModelAndView getAllPerson() {
         ModelAndView mav = new ModelAndView("index");
         List<Pessoa> peopleList = pessoaService.findAll();
-        mav.addObject("people", peopleList);
+        mav.addObject("pessoas", peopleList);
         return mav;
     }
 
+    @GetMapping("/add-person")
+    public ModelAndView addPerson() {
+        ModelAndView mav = new ModelAndView("add_person");
+        mav.addObject("command", new Pessoa());
+        return mav;
+    }
+
+    @PostMapping("/save-person")
+    public String savePerson(@ModelAttribute Pessoa pessoa) {
+        pessoaService.save(pessoa);
+        return "redirect:/";
+    }
+
+    @PostMapping("/person-update/{id}")
+    public ModelAndView updatePerson(@PathVariable("id") Integer id) {
+        ModelAndView mav = new ModelAndView("add_person");
+        Pessoa pessoa = pessoaService.getById(id);
+        mav.addObject("command", pessoa);
+        return mav;
+    }
+
+    @GetMapping("/person-delete/{id}")
+    public String deletePerson(@PathVariable("id") Integer id) {
+        Pessoa deletePerson = pessoaService.getById(id);
+        pessoaService.delete(deletePerson);
+        return "redirect:/";
+    }
 }
