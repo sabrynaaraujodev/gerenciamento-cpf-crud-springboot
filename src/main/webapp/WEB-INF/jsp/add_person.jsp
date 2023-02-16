@@ -20,7 +20,7 @@
             <div class="card-body">
                 <div class="col-md-10">
                     <form:form action="/save-person"
-                        method="post" modelAttribute="command">
+                        method="get" modelAttribute="command">
                         <form:hidden path="id" />
                         <div class="row">
                             <div class="form-group col-md-8">

@@ -28,13 +28,13 @@ public class PessoaController {
         return mav;
     }
 
-    @PostMapping("/save-person")
+    @GetMapping("/save-person")
     public String savePerson(@ModelAttribute Pessoa pessoa) {
         pessoaService.save(pessoa);
         return "redirect:/";
     }
 
-    @PostMapping("/person-update/{id}")
+    @GetMapping("/person-update/{id}")
     public ModelAndView updatePerson(@PathVariable("id") Integer id) {
         ModelAndView mav = new ModelAndView("add_person");
         Pessoa pessoa = pessoaService.getById(id);
