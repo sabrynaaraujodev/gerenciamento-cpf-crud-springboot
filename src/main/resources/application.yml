@@ -25,3 +25,7 @@ spring:
       max-request-size: 5MB
   flyway:
     enabled: true
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
