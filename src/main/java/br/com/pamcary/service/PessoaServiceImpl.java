@@ -15,12 +15,12 @@ public class PessoaServiceImpl implements PessoaService {
 
     @Override
     public void save(Pessoa pessoa) {
-        if (pessoa.getCodigo() == null) {
+        if (pessoa.getId() == null) {
             pessoaRepository.save(pessoa);
         } else {
-            Pessoa personUpdate = pessoaRepository.findById(pessoa.getCodigo()).get();
+            Pessoa personUpdate = pessoaRepository.findById(pessoa.getId()).get();
             personUpdate.setNome(pessoa.getNome());
-            personUpdate.setCodigo(pessoa.getCodigo());
+            personUpdate.setId(pessoa.getId());
             personUpdate.setDataNascimento(pessoa.getDataNascimento());
             personUpdate.setCpf(pessoa.getCpf());
             pessoaRepository.save(personUpdate);
