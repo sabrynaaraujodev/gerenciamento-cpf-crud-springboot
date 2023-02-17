@@ -34,7 +34,7 @@
                                     path="cpf" placeholder="Enter cpf" />
                             </div>
                             <div class="form-group col-md-8">
-                                <label for="dataNascimento" class="col-form-label">Email</label>
+                                <label for="dataNascimento" class="col-form-label">Data Nascimento</label>
                                 <form:input type="text" class="form-control" id="dataNascimento"
                                     path="dataNascimento" placeholder="dataNascimento" />
                             </div>
