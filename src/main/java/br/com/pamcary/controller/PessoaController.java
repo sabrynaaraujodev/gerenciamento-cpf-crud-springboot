@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 public class PessoaController {
+
     @Autowired
     PessoaService pessoaService;
 
@@ -32,7 +33,7 @@ public class PessoaController {
     @PostMapping("/save-person")
     public String savePerson(@Valid @ModelAttribute Pessoa pessoa) {
         pessoaService.save(pessoa);
-        return "redirect:/";
+        return "Salvo com sucesso";
     }
 
     @GetMapping("/person-update/{id}")
@@ -45,8 +46,8 @@ public class PessoaController {
 
     @GetMapping("/person-delete/{id}")
     public String deletePerson(@Valid @PathVariable("id") Integer id) {
-        Pessoa deletePerson = pessoaService.getById(id);
-        pessoaService.delete(deletePerson);
-        return "redirect:/";
+        Pessoa person = pessoaService.getById(id);
+        pessoaService.delete(person);
+        return "excluido com sucesso";
     }
 }
