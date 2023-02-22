@@ -15,18 +15,18 @@
 
 # 🛠️ Abrir e rodar o projeto
 
-**Executar mvn clean install para instalar e atualizar as dependencias
-Startar o projeto
+- Executar no terminal o comando "mvn clean install" para instalar e atualizar as dependencias
+- Startar o projeto
 Acessar http://localhost:8080/**
 
 
 ✔️ Técnicas e tecnologias utilizadas
-Java 8
-InteliJ IDEA
-JSP
-Ajax
-Banco H2
-HTML/CSS/JavaScript
+- Java 8
+- InteliJ IDEA
+- JSP
+- Ajax
+- Banco H2
+- HTML/CSS/JavaScript
 
 
 
