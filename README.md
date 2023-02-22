@@ -1,10 +1,25 @@
-# Avaliação
+<h1 align="center"> Sistema para cadastro de pessoas </h1>
 
-### Tarefas
+<p align="center">
+<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+</p>
 
-- Crie uma API pública em que seja possível listar, cadastrar, deletar e atualizar pessoas (C.R.U.D)
-- Crie um endpoint público de busca por CPF
-- Crie uma interface web. Sugestão: Angular2+, JSF 1.2
+# :hammer: Funcionalidades do projeto
+
+- `Funcionalidade 1`: API pública em que seja possível listar, cadastrar, deletar e atualizar pessoas (C.R.U.D)
+- `Funcionalidade 2`: endpoint público de busca por CPF
+
+# 📁 Acesso ao projeto
+
+**git clone {URL}**
+
+# 🛠️ Abrir e rodar o projeto
+
+**Executar mvn clean install para instalar e atualizar as dependencias**
+**Startar o projeto**
+**Acessar http://localhost:8080/**
+
+
 
 
 ### O que esperamos ?
@@ -17,6 +32,3 @@
 - Ver sua experiência codificando
 - CLEAN CODE
 - Keep it simple =] 
-
-### Prazo de entrega
-Após recebimento do e-mail o candidato terá 48hrs para entregar o projeto.
