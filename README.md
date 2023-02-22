@@ -17,7 +17,7 @@
 
 - Executar no terminal o comando "mvn clean install" para instalar e atualizar as dependencias
 - Startar o projeto
-Acessar http://localhost:8080/**
+- Acessar http://localhost:8080/**
 
 
 ✔️ Técnicas e tecnologias utilizadas
