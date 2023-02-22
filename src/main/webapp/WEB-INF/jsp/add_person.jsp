@@ -35,7 +35,8 @@
 
                                     <div class="form-group col-md-8">
                                         <label for="cpf">CPF</label>
-                                        <input name="cpf" type="text" class="form-control" id="cpf">
+                                        <input name="cpf" type="text" class="form-control" id="cpf"
+                                        onkeypress="return onlynumber();" maxlength="11">
                                     </div>
 
 
