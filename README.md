@@ -20,7 +20,8 @@
 - Acessar http://localhost:8080/**
 
 
-✔️ Técnicas e tecnologias utilizadas
+# ✔ ATécnicas e tecnologias utilizadas
+
 - Java 8
 - InteliJ IDEA
 - JSP
