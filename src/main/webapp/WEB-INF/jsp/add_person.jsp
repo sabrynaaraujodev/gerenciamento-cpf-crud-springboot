@@ -14,42 +14,16 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         </head>
 
-
-        <script>
-
-            function alerta() {
-              alert("Salvo com sucesso");
-            }
-
-
-            function enviaForm(form) {
-
-                $.ajaxSetup({
-                    dataType: 'json',
-                    contentType: "application/json; charset=utf-8",
-                    accepts: {
-                        text: "application/json"
-                    }
-                });
-
-                let dataJSON = {};
-                $.map($(form).serializeArray(), function (n, i) {
-                    dataJSON[n['name']] = n['value'];
-                });
-
-                $.post("/save-person", JSON.stringify(dataJSON), function (json) {
-                    console.log(json);
-                }, 'json');
-            }
-        </script>
-
         <body>
+
+        <script type="text/javascript" src='<c:url value="/scripts/arquivo.js"/>'></script>
+
             <div class="container my-5">
                 <h3>Add Pessoa</h3>
                 <div class="card">
                     <div class="card-body">
                         <div class="col-md-10">
-                            <form onsubmit="enviaForm(this)" action="javascript:return false;">
+                            <form onsubmit="enviaForm(this)" action="javascript:return false;" name="form">
                                 <div class="row">
 
 
@@ -74,7 +48,7 @@
 
                                     <div class="col-md-6">
                                         <input type="submit" class="btn btn-primary" onclick="alerta()"
-                                            value=" Submit ">
+                                            value=" Submit " >
                                     </div>
 
                                 </div>
