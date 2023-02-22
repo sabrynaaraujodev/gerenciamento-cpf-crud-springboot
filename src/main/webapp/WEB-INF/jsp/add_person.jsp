@@ -12,12 +12,10 @@
             <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}" />
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script type="text/javascript" src='<c:url value="/scripts/arquivo.js"/>'></script>
         </head>
 
         <body>
-
-        <script type="text/javascript" src='<c:url value="/scripts/arquivo.js"/>'></script>
-
             <div class="container my-5">
                 <h3>Add Pessoa</h3>
                 <div class="card">
