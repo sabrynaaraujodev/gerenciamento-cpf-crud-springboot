@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -28,12 +29,6 @@ public class PessoaController {
         return mav;
     }
 
-    @GetMapping("/save-person")
-    public String savePerson(@ModelAttribute Pessoa pessoa) {
-        pessoaService.save(pessoa);
-        return "redirect:/";
-    }
-
     @GetMapping("/person-update/{id}")
     public ModelAndView updatePerson(@PathVariable("id") Integer id) {
         ModelAndView mav = new ModelAndView("add_person");
@@ -42,10 +37,15 @@ public class PessoaController {
         return mav;
     }
 
-    @GetMapping("/person-delete/{id}")
-    public String deletePerson(@PathVariable("id") Integer id) {
+
+    @PostMapping("/save-person")
+    public void savePerson(@RequestBody @Valid Pessoa pessoa) {
+        pessoaService.save(pessoa);
+    }
+
+    @DeleteMapping("/person-delete/{id}")
+    public void deletePerson(@PathVariable("id") Integer id) {
         Pessoa deletePerson = pessoaService.getById(id);
         pessoaService.delete(deletePerson);
-        return "redirect:/";
     }
 }
