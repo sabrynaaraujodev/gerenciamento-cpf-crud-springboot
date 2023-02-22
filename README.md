@@ -20,6 +20,14 @@
 **Acessar http://localhost:8080/**
 
 
+✔️ Técnicas e tecnologias utilizadas
+Java 8
+InteliJ IDEA
+JSP
+Ajax
+Banco H2
+HTML/CSS/JavaScript
+
 
 
 ### O que esperamos ?
