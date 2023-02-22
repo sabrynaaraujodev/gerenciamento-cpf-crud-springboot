@@ -21,36 +21,34 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="col-md-10">
-                            <form onsubmit="enviaForm(this)" action="javascript:return false;" name="form">
+                            <form:form onsubmit="enviaForm(this)" action="javascript:return false;" name="form">
                                 <div class="row">
 
 
                                     <div class="form-group col-md-8">
-                                        <label for="nome">Nome Completo</label>
-                                        <input name="nome" type="text" class="form-control" id="nome">
+                                        <label for="nome" class="col-form-label">Nome Completo</label>
+                                        <form:input type="text" class="form-control" id="nome" path="nome"
+                                            placeholder="Enter Name" />
                                     </div>
-
-
                                     <div class="form-group col-md-8">
-                                        <label for="cpf">CPF</label>
-                                        <input name="cpf" type="text" class="form-control" id="cpf"
-                                        onkeypress="return onlynumber();" maxlength="11">
+                                        <label for="cpf" class="col-form-label">cpf</label>
+                                        <form:input onkeypress="return onlynumber();" maxlength="11" type="text"
+                                            class="form-control" id="cpf" path="cpf" placeholder="Enter Name" />
                                     </div>
-
-
                                     <div class="form-group col-md-8">
-                                        <label for="dataNascimento">Data de Nascimento</label>
-                                        <input name="dataNascimento" type="text" class="form-control"
-                                            id="dataNascimento">
+                                        <label for="dataNascimento" class="col-form-label">dataNascimento</label>
+                                        <form:input type="text" class="form-control" id="dataNascimento"
+                                            path="dataNascimento" placeholder="Enter dataNascimento" />
                                     </div>
 
 
                                     <div class="col-md-6">
                                         <input type="submit" class="btn btn-primary" onclick="alerta()"
-                                            value=" Submit " >
+                                            value=" Submit ">
                                     </div>
 
                                 </div>
+                            </form:form>
                         </div>
                     </div>
                 </div>
